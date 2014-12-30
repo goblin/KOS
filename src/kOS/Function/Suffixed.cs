@@ -298,4 +298,14 @@ namespace kOS.Function
             shared.Cpu.PushStack(constants);
         }
     }
+
+	[Function("telnet")]
+	public class FunctionTelnet : FunctionBase
+	{
+		public override void Execute(SharedObjects shared)
+		{
+			var telnet = new Telnet (shared);
+			shared.Cpu.PushStack (telnet);
+		}
+	}
 }

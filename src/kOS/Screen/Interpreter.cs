@@ -101,6 +101,11 @@ namespace kOS.Screen
             return commandHistory[absoluteIndex-1];
         }
 
+        public void RunCommand(string commandText)
+        {
+        	ProcessCommand(commandText);
+        }
+            
         protected virtual void ProcessCommand(string commandText)
         {
             CompileCommand(commandText);
